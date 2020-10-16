@@ -1,4 +1,8 @@
-### Hi there 👋
+### Hey! 👋
+
+Hey, I'm Cameron! I am a fullstack web developer who is dedicated to creating elegant web solutions.
+
+- ⚡ Member of the React.js fanclub
 
 <!--
 **cameron-kirby/cameron-kirby** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
