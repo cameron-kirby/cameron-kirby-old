@@ -1,6 +1,6 @@
-# Hey! 👋
+# Hey! 👋 I'm Cameron
 
-Hey, I'm Cameron! I am a fullstack web developer who is dedicated to creating elegant web solutions.
+I am a fullstack web developer
 
 - ⚡ Member of the React.js fanclub
 
