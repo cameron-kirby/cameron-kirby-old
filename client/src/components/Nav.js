@@ -16,11 +16,11 @@ const StyledNav = styled.nav`
     height: 100vh;
     position: fixed;
     z-index: 5;
-    background-color: hsl(var(--background-secondary));
+    background-color: var(--red);
     transition: width .35s cubic-bezier(var(--transition-main), 1);
     overflow-y: auto;
     overflow-x: hidden;
-    background-color: #FFA400;
+    background-color: var(--red);
 
     :hover {
         width: 16em;
@@ -50,7 +50,7 @@ const StyledNav = styled.nav`
         margin: 0 0 2em 0;
         width: 100%;
         height: 5em;
-        background: hsl(var(--background-secondary-dark));
+        background: var(--black);
     }
     .navbar-logo > .navbar-item-inner {
         width: calc(5rem - 8px);
@@ -58,9 +58,9 @@ const StyledNav = styled.nav`
     .navbar-logo > .navbar-item-inner:hover {
         background-color: transparent;
     }
-    .navbar-logo > .navbar-item-inner > svg {
+    .navbar-logo > .navbar-item-inner {
         height: 2em;
-        fill: hsl(var(--white));
+        color: var(--beige);
     }
     /* Navbar Items */
     .navbar-items {
@@ -77,15 +77,15 @@ const StyledNav = styled.nav`
         padding: 1em 0;
         width: 100%;
         position: relative;
-        color: hsl(var(--quite-gray));
+        color: var(--black) ;
         border-radius: .25em;
         text-decoration: none;
         transition: all .2s cubic-bezier(var(--transition-main), 1);
     }
     .navbar-item-inner:hover {
-        color: hsl(var(--white));
-        background: hsl(var(--background-secondary-light));
-        box-shadow: 0 17px 30px -10px hsla(var(--black), .25);
+        color: var(--beige);
+        background: var(--black);
+        box-shadow: 0 17px 30px -10px var(--black);
     }
     .navbar-item-inner-icon-wrapper {
         width: calc(5rem - 1em - 8px);
