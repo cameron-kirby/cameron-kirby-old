@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+/* ===========
+  Variables
+=========== */
+
 :root {
   /* New Colors */
   --red: #FE5F55;
@@ -8,15 +14,13 @@
   --black: #384343;
 
 
-
+  /* OLD Colors */
   --primary: 237, 94%, 81%;
   --background: 266, 16%, 92%;
   --background-secondary: 256, 12%, 12%;
   --background-secondary-dark: 256, 10%, 10%;
   --background-secondary-light: 257, 11%, 16%;
   --text-primary: 0, 0%, 0%;
-
-  /* OLD Colors */
   --white: 0, 0%, 100%;
   --quite-gray: 0, 0%, 50%;
   --grooble: 10, 28%, 93%;
@@ -30,6 +34,76 @@
 
   /* misc */
   --transition-main: .175, .685, .32;
+
+  /* Fonts */
+  --font-main: "Source Sans Pro";
+}
+
+/* ===============
+  Global Styles
+=============== */
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+html, body {
+  margin: 0;
+  width: 100%;
+  /* color: hsl(var(--text-primary)); */
+  font-family: var(--font-main);
+  /* background-color: hsl(var(--background)); */
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+/* ============
+  Typography
+============ */
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+/* Font Size */
+h1 {
+  font-size: var(--heading-large);
+}
+h2 {
+  font-size: var(--heading-medium);
+}
+h3 {
+  font-size: var(--heading-small);
+}
+h4 {
+  font-size: calc(var(--heading-small) - .2rem);
+}
+h5 {
+  font-size: calc(var(--heading-small) - .4rem);
+}
+h6 {
+  font-size: calc(var(--heading-small) - .6rem);
+}
+/* Font Weight */
+h1, h2 {
+  font-weight: 900;
+}
+h3, h4, h5, h6 {
+  font-weight: 800;
+}
+/* Paragraphs */
+p {
+  margin: 0;
+  font-size: var(--paragraph);
+}
+/* Links */
+a {
+  /*color: hsla(var(--primary), 1);*/
+  font-size: var(--paragraph);
+  text-decoration: underline;
+}
+a:visited {
+  /* color: hsla(var(--primary), .5); */
 }
 
 .App {

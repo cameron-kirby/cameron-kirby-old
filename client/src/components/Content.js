@@ -1,16 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
 
+// COMPONENTS
+import Home from './pages/Home'
+
 const StyledContent = styled.div`
-    width: 75%;
-    background-color: #EAF6FF;
+    margin-left:5rem;
+    width: 100%;
 `
 
 const Content = props => {
 
     return(
         <StyledContent>
-            hallo
+            <Home />
         </StyledContent>
     )
 }

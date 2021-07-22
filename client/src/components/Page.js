@@ -7,7 +7,7 @@ import Content from './Content'
 import Background from './Background'
 
 const StyledPage = styled.div`
-    display: flex;
+
 `
 
 
@@ -17,6 +17,7 @@ const Page = props => {
         <StyledPage>
             <Nav/>
             <Background/>
+            <Content />
         </StyledPage>
     )
 }

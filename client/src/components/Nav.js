@@ -3,11 +3,7 @@ import styled from 'styled-components'
 import { Route, Switch, Link } from 'react-router-dom'
 
 // ICONS
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faHome, faBriefcase } from '@fortawesome/free-solid-svg-icons'
-
-const homeIcon = <FontAwesomeIcon icon={faHome} />
-const userIcon = <FontAwesomeIcon icon={faUser} />
+import {Envelope, HomeHeart, UserPin, Briefcase} from '@styled-icons/boxicons-regular'
 
 const StyledNav = styled.nav`
     top: 0;
@@ -131,7 +127,7 @@ const Nav = props => {
                 <li className="navbar-item flexbox-left">
                     <Link to="/" className="navbar-item-inner flexbox-left">
                         <div className="navbar-item-inner-icon-wrapper flexbox">
-                            <FontAwesomeIcon className="link-icon" icon={faHome} />
+                            <HomeHeart />
                         </div>
                         <span className="link-text">Home</span>
                     </Link>
@@ -139,7 +135,7 @@ const Nav = props => {
                 <li className="navbar-item flexbox-left">
                     <Link to="/" className="navbar-item-inner flexbox-left">
                         <div className="navbar-item-inner-icon-wrapper flexbox">
-                            <FontAwesomeIcon className="link-icon" icon={faUser} />
+                            <UserPin />
                         </div>
                         <span className="link-text">About</span>
                     </Link>
@@ -147,9 +143,17 @@ const Nav = props => {
                 <li className="navbar-item flexbox-left">
                     <Link to="/" className="navbar-item-inner flexbox-left">
                         <div className="navbar-item-inner-icon-wrapper flexbox">
-                            <FontAwesomeIcon className="link-icon" icon={faBriefcase} />
+                            <Briefcase />
                         </div>
                         <span className="link-text">Work</span>
+                    </Link>
+                </li>
+                <li className="navbar-item flexbox-left">
+                    <Link to="/" className="navbar-item-inner flexbox-left">
+                        <div className="navbar-item-inner-icon-wrapper flexbox">
+                            <Envelope />
+                        </div>
+                        <span className="link-text">Contact</span>
                     </Link>
                 </li>
             </ul>

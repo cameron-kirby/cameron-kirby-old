@@ -67,10 +67,13 @@ let lastFrameProps = {
 }
 
 const StyledBackground = styled.div`
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
     width: 100%;
     height: 100vh;
     background-color: #4F6367;
-    margin-left: 5rem;
 
     .blob1 {
         position: absolute;
@@ -96,6 +99,7 @@ const Background = props => {
     const leftAnimationRef = useRef(null)
     const rightAnimationRef = useRef(null)
 
+    // Animation effect hook
     useEffect(() => {
         // LEFT SIDE ANIMATION TIMELINE
         leftAnimationRef.current = anime.timeline({
