@@ -17,7 +17,7 @@ const StyledHome = styled.div`
     }
 `
 
-const oldblobColors = ['#f5a147','#51cad8','#112b39']
+// const oldblobColors = ['#f5a147','#51cad8','#112b39']
 const blobColors = ['#FE5F55','#7A9E9F','#EEF5DB']
 
 const Home = props => {

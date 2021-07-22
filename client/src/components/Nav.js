@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Route, Switch, Link } from 'react-router-dom'
-
 // ICONS
-import {Envelope, HomeHeart, UserPin, Briefcase} from '@styled-icons/boxicons-regular'
+import { Briefcase, Envelope, HomeHeart, UserPin } from '@styled-icons/boxicons-regular'
+import React from 'react'
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+
 
 const StyledNav = styled.nav`
     top: 0;
