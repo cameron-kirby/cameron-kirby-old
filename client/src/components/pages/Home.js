@@ -1,6 +1,5 @@
-import React, { useRef, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import anime from 'animejs'
 
 // COMPONENTS
 import Blobtext from '../pieces/Blobtext'
