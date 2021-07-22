@@ -49,6 +49,9 @@
 html, body {
   margin: 0;
   width: 100%;
+  max-width: 100vw;
+  max-height: 100vw;
+  overflow: hidden;
   /* color: hsl(var(--text-primary)); */
   font-family: var(--font-main);
   /* background-color: hsl(var(--background)); */
