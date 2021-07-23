@@ -78,7 +78,7 @@ const StyledBackground = styled.div`
     .blob1 {
         position: absolute;
         bottom: 0;
-        left: 5rem;
+        left: 0;
         //flex-grow: 1;
         width: 100%;
         height: auto;

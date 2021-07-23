@@ -61,7 +61,7 @@ const blobArray = [
 ]
 
 const StyledBlobtext = styled.div`
-    width: 75%;
+    width: 60%;
     svg {
         width: 100%;
     }

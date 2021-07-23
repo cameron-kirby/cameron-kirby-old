@@ -7,16 +7,19 @@ import styled from 'styled-components'
 
 const StyledNav = styled.nav`
     top: 0;
+    margin: 1rem;
     padding: 0;
     width: 5em;
-    height: 100vh;
+    height: calc(100vh - 2rem);
     position: fixed;
     z-index: 5;
+
+    border-radius:20px;
     background-color: var(--red);
     transition: width .35s cubic-bezier(var(--transition-main), 1);
     overflow-y: auto;
     overflow-x: hidden;
-    background-color: var(--red);
+    background-color: var(--beige);
 
     :hover {
         width: 16em;
