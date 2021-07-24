@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Switch, Route, useLocation } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 // COMPONENTS
 import Home from './pages/Home'
@@ -11,11 +11,10 @@ const StyledContent = styled.div`
 `
 
 const Content = ({transition, setTransition}) => {
-    let location = useLocation();
 
     return(
         <StyledContent>
-            <Switch location={location}>
+            <Switch>
                 <Route path="/about">
                     <Panel transition={transition} setTransition={setTransition}>
 

@@ -7,12 +7,14 @@ export default function CustomLink({ to, children, propClass, setTransition }) {
   function delayAndGo(e) {
     e.preventDefault();
 
-    setTransition("exit")
+    if(!(history.location.pathname === to)){
+      setTransition("exit")
 
-    setTimeout(() => {
-        setTransition("enter")
-        history.push(to)
-    }, 500);
+      setTimeout(() => {
+          setTransition("enter")
+          history.push(to)
+      }, 500);
+    }
   }
 
   return (

@@ -8,7 +8,7 @@ const StyledWavetext = styled.div`
     }
 
     .filled-text {
-        font-family: 'Source Sans Pro', sans-serif;
+        font-family: var(--font-main);
         font-size: 2em;
         line-height: 0.9;
         font-weight: 900;
@@ -53,7 +53,7 @@ const Wavetext = props => {
             targets: "#textwave1",
             d: waveProps.wavePath.wave1[1],
             easing: 'easeInOutQuad',
-            duration: 5000,
+            duration: 2000,
             loop: true,  
             direction: 'alternate'
         })
@@ -62,7 +62,7 @@ const Wavetext = props => {
             targets: "#textwave2",
             d: waveProps.wavePath.wave2[1],
             easing: 'easeInOutQuad',
-            duration: 5000,
+            duration: 2000,
             loop: true,  
             direction: 'alternate'
         })

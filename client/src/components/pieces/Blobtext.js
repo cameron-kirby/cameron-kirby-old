@@ -68,7 +68,7 @@ const StyledBlobtext = styled.div`
 
     .filled-heading {
         text-transform: uppercase;
-        font-family: 'Source Sans Pro', sans-serif;
+        font-family: var(--font-main);
         font-size: 5em;
         font-weight: 900;
         line-height: 0.9;
