@@ -39,7 +39,7 @@ const StyledPanel = styled.div`
     }
 `
 
-const Panel = ({ transition, setTransition }) => {
+const Panel = ({ transition }) => {
     const animationRef = useRef(null)
     
     // Animation effect hook

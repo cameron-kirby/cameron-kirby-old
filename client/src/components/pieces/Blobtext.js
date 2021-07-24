@@ -99,7 +99,7 @@ const Blobtext = ({ transition, blobColors }) => {
 
     // Animation effect hook
     useEffect(() => {
-        if (transition === "enter") {
+        if (transition === "enter" || transition === "idle") {
             animationRef.current = anime({
                 targets: "#background path",
                 scale: 0,
