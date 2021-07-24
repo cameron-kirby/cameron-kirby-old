@@ -93,24 +93,34 @@ const StyledBlobtext = styled.div`
     }
 `
 
-const Blobtext = props => {
+const Blobtext = ({ transition, blobColors }) => {
     const animationRef = useRef(null)
     
 
     // Animation effect hook
     useEffect(() => {
-        animationRef.current = anime({
-            targets: "#background path",
-            scale: 0,
-            rotate: 33,
-            delay: anime.stagger(20),
-            direction: 'reverse'
-        })
-    })
+        if (transition === "enter") {
+            animationRef.current = anime({
+                targets: "#background path",
+                scale: 0,
+                rotate: 33,
+                delay: anime.stagger(20),
+                direction: 'reverse'
+            })
+        }
+        if (transition === "exit") {
+            animationRef.current = anime({
+                targets: '.landerText',
+                easing: 'easeInOutExpo',
+                opacity: ['100%', '0%'],
+                duration: 500,
+            })
+        }
+    }, [transition])
 
     return(
         <StyledBlobtext>
-            <svg viewBox="0 0 700 225">
+            <svg viewBox="0 0 700 225" className='landerText'>
                 <clipPath id="textClip" className="filled-heading">
                     <rect x="10" width="13" height="219" />
                     <text x="30" y="70">Hello!</text>
@@ -130,7 +140,7 @@ const Blobtext = props => {
                     {blobArray.map((blobPath, index)=> {
                         return(<path d={blobPath} 
                             strokeWidth={.22275} 
-                            style={{fill:props.blobColors[Math.floor(Math.random() * props.blobColors.length)]}}
+                            style={{fill:blobColors[Math.floor(Math.random() * blobColors.length)]}}
                             key={index}/>)
                     })}
                 </g>
@@ -140,6 +150,3 @@ const Blobtext = props => {
 }
 
 export default Blobtext
-//
-// fill={props.blobColors[Math.floor(Math.random() * props.blobColors.length)]}
-//                             fill-opacity="0.5"

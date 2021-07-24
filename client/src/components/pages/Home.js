@@ -11,19 +11,15 @@ const StyledHome = styled.div`
     align-items: center;
     justify-content: center;
 
-    .landing-text{
-        width:100%;
-    }
 `
 
 // const oldblobColors = ['#f5a147','#51cad8','#112b39']
 const blobColors = ['#FE5F55','#7A9E9F','#EEF5DB']
 
-const Home = props => {
-
+const Home = ({ transition }) => {
     return(
         <StyledHome>
-                <Blobtext className="landing-text" blobColors={blobColors}/>
+                <Blobtext transition={transition} className="landing-text" blobColors={blobColors} />
         </StyledHome>
     )
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 // COMPONENTS
@@ -12,12 +12,13 @@ const StyledPage = styled.div`
 
 
 const Page = props => {
+    const [transition, setTransition] = useState("idle")
 
     return(
         <StyledPage>
-            <Nav/>
+            <Nav setTransition={setTransition}/>
             <Background/>
-            <Content />
+            <Content transition={transition} setTransition={setTransition}/>
         </StyledPage>
     )
 }

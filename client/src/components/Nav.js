@@ -1,8 +1,9 @@
+import React from 'react'
+import styled from 'styled-components'
+import CustomLink from './pieces/CustomLink'
+import Wavetext from './pieces/Wavetext'
 // ICONS
 import { Briefcase, Envelope, HomeHeart, UserPin } from '@styled-icons/boxicons-regular'
-import React from 'react'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
 
 
 const StyledNav = styled.nav`
@@ -58,7 +59,7 @@ const StyledNav = styled.nav`
         background-color: transparent;
     }
     .navbar-logo > .navbar-item-inner {
-        height: 2em;
+        height: 4em;
         color: var(--beige);
     }
     /* Navbar Items */
@@ -115,49 +116,67 @@ const StyledNav = styled.nav`
     }
 `
 
+const waveProps = {
+    word: "CK",
+    viewBoxSize: {
+        x: 50,
+        y: 50,
+    },
+    wavePath: {
+        wave1: ["M 0 50 h 50 V 30 C 32 46 22 7 0 25 V 25 z", "M 0 50 h 50 V 25 C 34 14 25 47 0 30 V 30 z"],
+        wave2: ["M 0 50 h 50 V 35 C 27 46 23 13 0 30 V 30 z", "M 0 50 h 50 V 34 C 33 19 25 47 0 42 V 42 z"],
+    },
+    waveColors: {
+        background: '#EEF5DB',
+        wave1: '#FE5F55',
+        wave2: '#7A9E9F'
+    },
+    fontWeight: 900,
+}
+
 const Nav = props => {
 
     return(
         <StyledNav>
             <ul className="navbar-items flexbox-col">
-                <li className="navbar-logo flexbox-left">
-                    <Link to="/" className="navbar-item-inner flexbox-left">
+                <li className="navbar-logo flexbox">
+                    <CustomLink to="/" setTransition={props.setTransition} propClass="navbar-item-inner flexbox">
                         <div className="navbar-item-inner-icon-wrapper flexbox">
-                            CK
+                            <Wavetext waveProps={waveProps}/>
                         </div>
-                    </Link>
+                    </CustomLink>
                 </li>
                 <li className="navbar-item flexbox-left">
-                    <Link to="/" className="navbar-item-inner flexbox-left">
+                    <CustomLink to="/" setTransition={props.setTransition} propClass="navbar-item-inner flexbox-left">
                         <div className="navbar-item-inner-icon-wrapper flexbox">
                             <HomeHeart />
                         </div>
                         <span className="link-text">Home</span>
-                    </Link>
+                    </CustomLink>
                 </li>
                 <li className="navbar-item flexbox-left">
-                    <Link to="/" className="navbar-item-inner flexbox-left">
+                    <CustomLink to="/about" setTransition={props.setTransition} propClass="navbar-item-inner flexbox-left">
                         <div className="navbar-item-inner-icon-wrapper flexbox">
                             <UserPin />
                         </div>
                         <span className="link-text">About</span>
-                    </Link>
+                    </CustomLink>
                 </li>
                 <li className="navbar-item flexbox-left">
-                    <Link to="/" className="navbar-item-inner flexbox-left">
+                    <CustomLink to="/" setTransition={props.setTransition} propClass="navbar-item-inner flexbox-left">
                         <div className="navbar-item-inner-icon-wrapper flexbox">
                             <Briefcase />
                         </div>
                         <span className="link-text">Work</span>
-                    </Link>
+                    </CustomLink>
                 </li>
                 <li className="navbar-item flexbox-left">
-                    <Link to="/" className="navbar-item-inner flexbox-left">
+                    <CustomLink to="/" setTransition={props.setTransition} propClass="navbar-item-inner flexbox-left">
                         <div className="navbar-item-inner-icon-wrapper flexbox">
                             <Envelope />
                         </div>
                         <span className="link-text">Contact</span>
-                    </Link>
+                    </CustomLink>
                 </li>
             </ul>
         </StyledNav>
