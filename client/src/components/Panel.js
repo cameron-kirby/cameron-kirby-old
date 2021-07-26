@@ -16,13 +16,21 @@ const StyledPanel = styled.div`
     border-radius:20px;
     overflow-y: auto;
     overflow-x: hidden;
-    background-color: var(--beige);
+    // Background
+    backdrop-filter: blur(20px) saturate(190%);
+    -webkit-backdrop-filter: blur(20px) saturate(190%);
+    background-color: rgba(255,255,255,0.2);
+    border: 1px solid rgba(209,213,219, 0.3);
 
     .topbar {
         margin: 0 0 2em 0;
         width: 100%;
         height: 5em;
-        background: var(--black);
+        // Background
+        backdrop-filter: blur(20px) saturate(190%);
+        -webkit-backdrop-filter: blur(20px) saturate(190%);
+        background-color: rgba(255,255,255,0.2);
+        border: 1px solid rgba(209,213,219, 0.3);
 
         display: flex;
         align-items: center;
@@ -34,12 +42,12 @@ const StyledPanel = styled.div`
             font-size: 2em;
             line-height: 0.9;
             font-weight: 900;
-            color: var(--beige);
+            color: var(--black);
         }
     }
 `
 
-const Panel = ({ transition }) => {
+const Panel = ({ children, transition }) => {
     const animationRef = useRef(null)
     
     // Animation effect hook
@@ -70,6 +78,7 @@ const Panel = ({ transition }) => {
                     About
                 </div>
             </div>
+            {children}
         </StyledPanel>
     )
 }

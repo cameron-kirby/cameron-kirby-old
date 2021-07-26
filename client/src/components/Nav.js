@@ -14,13 +14,15 @@ const StyledNav = styled.nav`
     height: calc(100vh - 2rem);
     position: fixed;
     z-index: 5;
-
     border-radius:20px;
-    background-color: var(--red);
     transition: width .35s cubic-bezier(var(--transition-main), 1);
     overflow-y: auto;
     overflow-x: hidden;
-    background-color: var(--beige);
+
+    backdrop-filter: blur(20px) saturate(190%);
+    -webkit-backdrop-filter: blur(20px) saturate(190%);
+    background-color: rgba(255,255,255,0.2);
+    border: 1px solid rgba(209,213,219, 0.3);
 
     :hover {
         width: 16em;
@@ -50,7 +52,11 @@ const StyledNav = styled.nav`
         margin: 0 0 2em 0;
         width: 100%;
         height: 5em;
-        background: var(--black);
+        // Background
+        backdrop-filter: blur(20px) saturate(190%);
+        -webkit-backdrop-filter: blur(20px) saturate(190%);
+        background-color: rgba(255,255,255,0.2);
+        border: 1px solid rgba(209,213,219, 0.3);
     }
     .navbar-logo > .navbar-item-inner {
         width: calc(5rem - 8px);
@@ -80,11 +86,16 @@ const StyledNav = styled.nav`
         color: var(--black) ;
         border-radius: .25em;
         text-decoration: none;
+        border: 1px solid rgba(209,213,219, 0.0);
         transition: all .2s cubic-bezier(var(--transition-main), 1);
     }
     .navbar-item-inner:hover {
-        color: var(--beige);
-        background: var(--black);
+        color: var(--black);
+        // Background
+        backdrop-filter: blur(20px) saturate(190%);
+        -webkit-backdrop-filter: blur(20px) saturate(190%);
+        background-color: rgba(255,255,255,0.2);
+        border: 1px solid rgba(209,213,219, 0.3);
         box-shadow: 0 17px 30px -10px var(--black);
     }
     .navbar-item-inner-icon-wrapper {
@@ -127,7 +138,7 @@ const waveProps = {
         wave2: ["M 0 50 h 50 V 35 C 27 46 23 13 0 30 V 30 z", "M 0 50 h 50 V 34 C 33 19 25 47 0 42 V 42 z"],
     },
     waveColors: {
-        background: '#EEF5DB',
+        background: '#384343',
         wave1: '#FE5F55',
         wave2: '#7A9E9F'
     },
